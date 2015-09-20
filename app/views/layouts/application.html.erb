@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog3</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background:#80BFFF"ss>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-responsive.css">
+  <%= csrf_meta_tags %>
+    <nav class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    
+    <a class="brand" href="#">Wellcome Articles</a>
+    <ul class="nav">
+
+      <li><%= link_to 'Home', controller: 'welcome' %></li>
+     <li><%= link_to "My Blog", articles_path %></li>
+     <li><%= link_to "New Articl", new_article_path %></li>
+     
+     </div>
+  </div>
+</nav>
+<div class="container">
+
+<%= yield %>
+
+</body>
+</html>
